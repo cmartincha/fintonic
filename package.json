@@ -1,0 +1,22 @@
+{
+  "name": "fintonic",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env DEBUG=fintonic:* DB_NAME=fintonic DB_URL=localhost PORT=3000 node --experimental-modules bin/www.mjs",
+    "test": "cross-env DEBUG=fintonic:test:* DB_NAME=test DB_URL=localhost PORT=3001 mocha tests --recursive"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "mongoose": "^5.5.4",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.22",
+    "mocha": "^6.1.4",
+    "supertest": "^4.0.2"
+  }
+}
